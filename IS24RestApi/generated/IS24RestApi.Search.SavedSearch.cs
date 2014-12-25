@@ -107,7 +107,7 @@ namespace IS24RestApi.Search.SavedSearch
         /// <para xml:lang="en">Name of this saved search.</para>
         /// <para xml:lang="en">Maximum length: 60.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(60)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(60)]
         [System.Xml.Serialization.XmlElementAttribute("name", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Name { get; set; }
         

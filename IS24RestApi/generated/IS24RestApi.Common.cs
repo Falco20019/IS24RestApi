@@ -331,7 +331,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">title of the attachment</para>
         /// <para xml:lang="en">Maximum length: 30.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(30)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(30)]
         [System.Xml.Serialization.XmlElementAttribute("title", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Title { get; set; }
         
@@ -351,7 +351,7 @@ namespace IS24RestApi.Common
         ///                            </para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("externalId", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string ExternalId { get; set; }
         
@@ -801,7 +801,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">office hours</para>
         /// <para xml:lang="en">Maximum length: 1000.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(1000)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(1000)]
         [System.Xml.Serialization.XmlElementAttribute("officeHours", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string OfficeHours { get; set; }
         
@@ -871,8 +871,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Maximum length: 300.</para>
         /// <para xml:lang="en">Pattern: .+@.+\..+.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MinLengthAttribute(5)]
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(300)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(300, MinimumLength = 5)]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute(".+@.+\\..+")]
         [System.Xml.Serialization.XmlElementAttribute("email", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Email { get; set; }
@@ -923,7 +922,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Firstname of this contact.</para>
         /// <para xml:lang="en">Maximum length: 30.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(30)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(30)]
         [System.Xml.Serialization.XmlElementAttribute("firstname", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Firstname { get; set; }
         
@@ -932,7 +931,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Lastname of this contact.</para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("lastname", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Lastname { get; set; }
         
@@ -1098,7 +1097,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">The contact's title.</para>
         /// <para xml:lang="en">Maximum length: 15.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(15)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(15)]
         [System.Xml.Serialization.XmlElementAttribute("title", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Title { get; set; }
         
@@ -1107,7 +1106,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">addition to the name</para>
         /// <para xml:lang="en">Maximum length: 30.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(30)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(30)]
         [System.Xml.Serialization.XmlElementAttribute("additionName", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string AdditionName { get; set; }
         
@@ -1116,7 +1115,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">The name of the company</para>
         /// <para xml:lang="en">Maximum length: 100.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(100)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(100)]
         [System.Xml.Serialization.XmlElementAttribute("company", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Company { get; set; }
         
@@ -1125,7 +1124,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">homepageUrl</para>
         /// <para xml:lang="en">Maximum length: 300.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(300)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(300)]
         [System.Xml.Serialization.XmlElementAttribute("homepageUrl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
         public string HomepageUrl { get; set; }
         
@@ -1134,7 +1133,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Url to Contacts Portrait</para>
         /// <para xml:lang="en">Maximum length: 300.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(300)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(300)]
         [System.Xml.Serialization.XmlElementAttribute("portraitUrl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="anyURI")]
         public string PortraitUrl { get; set; }
         
@@ -1143,7 +1142,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">The position or function in the company</para>
         /// <para xml:lang="en">Maximum length: 100.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(100)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(100)]
         [System.Xml.Serialization.XmlElementAttribute("position", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Position { get; set; }
     }
@@ -1206,7 +1205,7 @@ namespace IS24RestApi.Common
         ///                        for foreign real estates.</para>
         /// <para xml:lang="en">Maximum length: 100.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(100)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(100)]
         [System.Xml.Serialization.XmlElementAttribute("street", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Street { get; set; }
         
@@ -1218,7 +1217,7 @@ namespace IS24RestApi.Common
         ///                        real estates. Also optional for LIVING_RENT_SITE, LIVING_BUY_SITE and TRADE_SITE</para>
         /// <para xml:lang="en">Maximum length: 30.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(30)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(30)]
         [System.Xml.Serialization.XmlElementAttribute("houseNumber", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string HouseNumber { get; set; }
         
@@ -1227,7 +1226,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">zip code</para>
         /// <para xml:lang="en">Maximum length: 20.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(20)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(20)]
         [System.Xml.Serialization.XmlElementAttribute("postcode", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Postcode { get; set; }
         
@@ -1236,7 +1235,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">city</para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("city", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string City { get; set; }
         
@@ -1274,7 +1273,7 @@ namespace IS24RestApi.Common
         ///                            Valid names are published (CSV-file) by is24, see online API documentation.</para>
         /// <para xml:lang="en">Minimum length: 1.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MinLengthAttribute(1)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(int.MaxValue, MinimumLength = 1)]
         [System.Xml.Serialization.XmlElementAttribute("region", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Region { get; set; }
     }
@@ -2948,8 +2947,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Minimum length: 5.</para>
         /// <para xml:lang="en">Maximum length: 40.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MinLengthAttribute(5)]
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(40)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40, MinimumLength = 5)]
         [System.Xml.Serialization.XmlElementAttribute("password", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Password { get; set; }
         
@@ -4746,7 +4744,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Description of the real estate</para>
         /// <para xml:lang="en">Maximum length: 2000.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(2000)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.Xml.Serialization.XmlElementAttribute("descriptionNote", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string DescriptionNote { get; set; }
         
@@ -4755,7 +4753,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Furnishing of the real estate</para>
         /// <para xml:lang="en">Maximum length: 2000.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(2000)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.Xml.Serialization.XmlElementAttribute("furnishingNote", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string FurnishingNote { get; set; }
         
@@ -4764,7 +4762,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Location information of the real estate</para>
         /// <para xml:lang="en">Maximum length: 2000.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(2000)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.Xml.Serialization.XmlElementAttribute("locationNote", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string LocationNote { get; set; }
         
@@ -4773,7 +4771,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Other description of the real estate</para>
         /// <para xml:lang="en">Maximum length: 2000.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(2000)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.Xml.Serialization.XmlElementAttribute("otherNote", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string OtherNote { get; set; }
         
@@ -4790,7 +4788,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Maximum length: 255.</para>
         /// <para xml:lang="en">Pattern: (http|https)://\w.*[.]\w.*.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(255)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(255)]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("(http|https)://\\w.*[.]\\w.*")]
         [System.Xml.Serialization.XmlElementAttribute("referencePriceServiceCall", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string ReferencePriceServiceCall { get; set; }
@@ -4801,7 +4799,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Maximum length: 255.</para>
         /// <para xml:lang="en">Pattern: (http|https)://\w.*[.]\w.*.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(255)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(255)]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("(http|https)://\\w.*[.]\\w.*")]
         [System.Xml.Serialization.XmlElementAttribute("referencePriceApiCall", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string ReferencePriceApiCall { get; set; }
@@ -4978,7 +4976,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Heading of the offering</para>
         /// <para xml:lang="en">Maximum length: 100.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(100)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(100)]
         [System.Xml.Serialization.XmlElementAttribute("title", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Title { get; set; }
         
@@ -5448,7 +5446,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Type of searchField</para>
         /// <para xml:lang="en">Maximum length: 16.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(16)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.Xml.Serialization.XmlElementAttribute("searchField1", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string SearchField1 { get; set; }
         
@@ -5459,7 +5457,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Type of searchField</para>
         /// <para xml:lang="en">Maximum length: 16.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(16)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.Xml.Serialization.XmlElementAttribute("searchField2", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string SearchField2 { get; set; }
         
@@ -5470,7 +5468,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Type of searchField</para>
         /// <para xml:lang="en">Maximum length: 16.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(16)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.Xml.Serialization.XmlElementAttribute("searchField3", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string SearchField3 { get; set; }
     }
@@ -7047,7 +7045,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">courtage, must be provided if hasCourtage is 'YES'</para>
         /// <para xml:lang="en">Maximum length: 100.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(100)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(100)]
         [System.Xml.Serialization.XmlElementAttribute("courtage", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Courtage { get; set; }
         
@@ -7056,7 +7054,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">courtage note</para>
         /// <para xml:lang="en">Maximum length: 1800.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(1800)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(1800)]
         [System.Xml.Serialization.XmlElementAttribute("courtageNote", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string CourtageNote { get; set; }
     }
@@ -7549,14 +7547,14 @@ namespace IS24RestApi.Common
         /// <summary>
         /// <para xml:lang="en">Maximum length: 16.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(16)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.Xml.Serialization.XmlElementAttribute("courtNumber", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string CourtNumber { get; set; }
         
         /// <summary>
         /// <para xml:lang="en">Maximum length: 40.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(40)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.Xml.Serialization.XmlElementAttribute("name", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Name { get; set; }
     }
@@ -10104,7 +10102,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Maximum length: 255.</para>
         /// <para xml:lang="en">Pattern: (http|https)://\w.*[.]\w.*.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(255)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(255)]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("(http|https)://\\w.*[.]\\w.*")]
         [System.Xml.Serialization.XmlElementAttribute("url", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Url { get; set; }
@@ -10432,8 +10430,7 @@ namespace IS24RestApi.Common
         /// <para xml:lang="en">Maximum length: 60.</para>
         /// <para xml:lang="en">Minimum length: 1.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(60)]
-        [System.ComponentModel.DataAnnotations.MinLengthAttribute(1)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(60, MinimumLength = 1)]
         [System.Xml.Serialization.XmlElementAttribute("code", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
         public string Code { get; set; }
         

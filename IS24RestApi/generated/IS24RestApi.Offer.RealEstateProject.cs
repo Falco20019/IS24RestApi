@@ -177,7 +177,7 @@ namespace IS24RestApi.Offer.RealEstateProject
         /// <para xml:lang="en">Maximum length: 255.</para>
         /// <para xml:lang="en">Pattern: (http|https)://\w.*[.]\w.*.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(255)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(255)]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("(http|https)://\\w.*[.]\\w.*")]
         [System.Xml.Serialization.XmlElementAttribute("homepageUrl", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string HomepageUrl { get; set; }
