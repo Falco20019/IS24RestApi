@@ -4,6 +4,12 @@ IS24RestApi
 A small library that accesses the [Immobilienscout24 Import/Export REST API](http://developerwiki.immobilienscout24.de/wiki/Import-Export-API)
 using [RestSharp](https://github.com/restsharp/RestSharp).
 
+About the fork
+--------------
+
+Since mganss/IS24RestApi is natively only working with .NET 4.5 in cause of the async/await usage, I backported it to support .NET 4.0 with 
+some help of the NuGet Package Microsoft.Bcf.Async. I needed this since I have to support Windows XP.
+
 Getting Started
 ---------------
 
