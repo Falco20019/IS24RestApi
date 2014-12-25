@@ -139,7 +139,7 @@ namespace IS24RestApi
                     throw new ArgumentException(string.Format("The file at path '{0}' is not available.", path));
                 }
 
-                return await CreateAsync(att, stream, fileName, MimeMapping.GetMimeMapping(fileName));
+                return await CreateAsync(att, stream, fileName, MimeExtensionHelper.GetMimeType(fileName));
             }
         }
 

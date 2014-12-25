@@ -642,7 +642,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">free from</para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("freeFrom", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string FreeFrom { get; set; }
         
@@ -1939,7 +1939,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">free from</para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("freeFrom", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string FreeFrom { get; set; }
         
@@ -2562,7 +2562,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">deposit</para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("deposit", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Deposit { get; set; }
         
@@ -7229,7 +7229,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">free from</para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("freeFrom", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string FreeFrom { get; set; }
         
@@ -7852,7 +7852,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">deposit</para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("deposit", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Deposit { get; set; }
         
@@ -8845,7 +8845,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">free from</para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("freeFrom", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string FreeFrom { get; set; }
         
@@ -10073,7 +10073,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">the file reference at the county court</para>
         /// <para xml:lang="en">Maximum length: 18.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(18)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(18)]
         [System.Xml.Serialization.XmlElementAttribute("fileReferenceAtCountyCourt", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string FileReferenceAtCountyCourt { get; set; }
         
@@ -10082,7 +10082,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">number of folio</para>
         /// <para xml:lang="en">Maximum length: 40.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(40)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(40)]
         [System.Xml.Serialization.XmlElementAttribute("numberOfFolio", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string NumberOfFolio { get; set; }
         
@@ -10112,7 +10112,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">Owner of the object to be auctioned</para>
         /// <para xml:lang="en">Maximum length: 80.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(80)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(80)]
         [System.Xml.Serialization.XmlElementAttribute("owner", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Owner { get; set; }
         
@@ -13184,7 +13184,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">deposit</para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("deposit", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Deposit { get; set; }
         
@@ -22470,7 +22470,7 @@ namespace IS24RestApi.Offer.RealEstates
         /// <para xml:lang="en">deposit</para>
         /// <para xml:lang="en">Maximum length: 50.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(50)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(50)]
         [System.Xml.Serialization.XmlElementAttribute("deposit", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Deposit { get; set; }
         

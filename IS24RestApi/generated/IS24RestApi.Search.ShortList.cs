@@ -358,7 +358,7 @@ namespace IS24RestApi.Search.ShortList
         /// <para xml:lang="en">Memo</para>
         /// <para xml:lang="en">Maximum length: 2000.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(2000)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(2000)]
         [System.Xml.Serialization.XmlElementAttribute("memo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Memo { get; set; }
         
@@ -1343,7 +1343,7 @@ namespace IS24RestApi.Search.ShortList
         /// <para xml:lang="en">in Bezug auf XML ungültige Zeichen werden bei der Ausgabe ausgefiltert</para>
         /// <para xml:lang="en">Maximum length: 30.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(30)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(30)]
         [System.Xml.Serialization.XmlElementAttribute("ownerFirstName", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string OwnerFirstName { get; set; }
         
@@ -1525,7 +1525,7 @@ namespace IS24RestApi.Search.ShortList
         ///                    </para>
         /// <para xml:lang="en">Maximum length: 150.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(150)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(150)]
         [System.Xml.Serialization.XmlElementAttribute("email", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Email { get; set; }
         
@@ -1538,7 +1538,7 @@ namespace IS24RestApi.Search.ShortList
         /// <para xml:lang="en">in Bezug auf XML ungültige Zeichen werden bei der Ausgabe ausgefiltert</para>
         /// <para xml:lang="en">Maximum length: 30.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(30)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(30)]
         [System.Xml.Serialization.XmlElementAttribute("invitedUserFirstName", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string InvitedUserFirstName { get; set; }
         
@@ -1551,7 +1551,7 @@ namespace IS24RestApi.Search.ShortList
         ///                    </para>
         /// <para xml:lang="en">Maximum length: 16.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(16)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(16)]
         [System.Xml.Serialization.XmlElementAttribute("verifierHash", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
         public string VerifierHash { get; set; }
     }
@@ -1630,7 +1630,7 @@ namespace IS24RestApi.Search.ShortList
         /// <summary>
         /// <para xml:lang="en">Maximum length: 221.</para>
         /// </summary>
-        [System.ComponentModel.DataAnnotations.MaxLengthAttribute(221)]
+        [System.ComponentModel.DataAnnotations.StringLengthAttribute(221)]
         [System.Xml.Serialization.XmlElementAttribute("textMessage", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="string")]
         public string TextMessage { get; set; }
         
