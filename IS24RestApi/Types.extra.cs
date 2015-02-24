@@ -314,7 +314,7 @@ namespace IS24RestApi.Offer.PremiumPlacement
         /// </value>
         public IEnumerable<Premiumplacement> Placements
         {
-            get { return Premiumplacement; }
+            get { return Placements; }
         }
     }
 

@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 using RestSharp;
 using IS24RestApi.Offer.RealEstates;
 using IS24RestApi.Common;
+using System.Collections.Generic;
+using IS24RestApi.AttachmentsOrder;
+using IS24RestApi.Offer.ListElement;
 
 namespace IS24RestApi
 {
@@ -44,7 +47,7 @@ namespace IS24RestApi
                         req.AddParameter("pagenumber", page);
                         var rel = await ExecuteAsync<RealEstates>(Connection, req);
 
-                        foreach (var ore in rel.RealEstateList)
+                        foreach (OfferRealEstateForList ore in rel.RealEstateList)
                         {
                             var oreq = Connection.CreateRequest("realestate/{id}");
                             oreq.AddParameter("id", ore.Id, ParameterType.UrlSegment);
@@ -57,6 +60,32 @@ namespace IS24RestApi
                         page++;
                     }
                 });
+        }
+
+        /// <summary>
+        /// Get all RealEstate objects as an enumerable sequence.
+        /// </summary>
+        /// <returns>The OfferRealEstateForList objects.</returns>
+        public List<OfferRealEstateForList> GetAsyncList()
+        {
+            var result = new List<OfferRealEstateForList>();
+            var page = 1;
+
+            while (true)
+            {
+                var req = Connection.CreateRequest("realestate");
+                req.AddParameter("pagesize", 100);
+                req.AddParameter("pagenumber", page);
+                var relTask = ExecuteAsync<RealEstates>(Connection, req);
+                relTask.Wait();
+                var rel = relTask.Result;
+
+                result.AddRange(rel.RealEstateList);
+
+                if (page >= rel.Paging.NumberOfPages) break;
+                page++;
+            }
+            return result;
         }
 
         /// <summary>

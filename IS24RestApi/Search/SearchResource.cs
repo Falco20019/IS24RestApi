@@ -58,5 +58,15 @@ namespace IS24RestApi.Search
 
             return ExecuteAsync<ResultList.Resultlist>(connection, req);
         }
+
+        /// <summary>
+        /// Performs a query of the user profile.
+        /// </summary>
+        /// <returns>The result of the search</returns>
+        public Task<Searcher.Searcher> GetProfile()
+        {
+            var req = connection.CreateRequest("searcher/me");
+            return ExecuteAsync<Searcher.Searcher>(connection, req);
+        }
     }
 }

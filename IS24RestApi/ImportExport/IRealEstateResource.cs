@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using IS24RestApi.Offer;
+using IS24RestApi.Offer.ListElement;
 using IS24RestApi.Offer.RealEstates;
 
 namespace IS24RestApi
@@ -15,6 +17,12 @@ namespace IS24RestApi
         /// </summary>
         /// <returns>The RealEstate objects.</returns>
         IObservable<IRealEstate> GetAsync();
+
+        /// <summary>
+        /// Get all RealEstate objects as an enumerable sequence.
+        /// </summary>
+        /// <returns>The OfferRealEstateForList objects.</returns>
+        List<OfferRealEstateForList> GetAsyncList();
 
         /// <summary>
         /// Gets a single RealEstate object identified by the specified id.
