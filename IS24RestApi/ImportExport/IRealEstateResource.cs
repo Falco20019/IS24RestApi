@@ -13,16 +13,16 @@ namespace IS24RestApi
     public interface IRealEstateResource : IResource
     {
         /// <summary>
-        /// Get all RealEstate objects as an observable sequence.
+        /// Get all real estates as an observable sequence.
         /// </summary>
-        /// <returns>The RealEstate objects.</returns>
+        /// <returns>The real estates.</returns>
         IObservable<IRealEstate> GetAsync();
 
         /// <summary>
-        /// Get all RealEstate objects as an enumerable sequence.
+        /// Get summaries for all real estates as an observable sequence.
         /// </summary>
-        /// <returns>The OfferRealEstateForList objects.</returns>
-        List<OfferRealEstateForList> GetAsyncList();
+        /// <returns>The summaries of all real estates.</returns>
+        IObservable<OfferRealEstateForList> GetSummariesAsync();
 
         /// <summary>
         /// Gets a single RealEstate object identified by the specified id.

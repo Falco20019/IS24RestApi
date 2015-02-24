@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Web;
 
 namespace IS24RestApi
@@ -7,6 +10,7 @@ namespace IS24RestApi
     public static class MimeExtensionHelper
     {
         static object locker = new object();
+        static object mimeMapping;
         static MethodInfo getMimeMappingMethodInfo;
 
         static MimeExtensionHelper()
@@ -25,7 +29,7 @@ namespace IS24RestApi
         public static string GetMimeType(string filename)
         {
             lock (locker)
-                return (string)getMimeMappingMethodInfo.Invoke(null, new object[] { filename });
+                return (string)getMimeMappingMethodInfo.Invoke(mimeMapping, new object[] { filename });
         }
     }
 }

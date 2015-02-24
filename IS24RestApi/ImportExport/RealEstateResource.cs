@@ -4,8 +4,6 @@ using System.Threading.Tasks;
 using RestSharp;
 using IS24RestApi.Offer.RealEstates;
 using IS24RestApi.Common;
-using System.Collections.Generic;
-using IS24RestApi.AttachmentsOrder;
 using IS24RestApi.Offer.ListElement;
 
 namespace IS24RestApi
@@ -30,12 +28,21 @@ namespace IS24RestApi
         public IIS24Connection Connection { get; private set; }
 
         /// <summary>
-        /// Get all RealEstate objects as an observable sequence.
+        /// Get all real estates as an observable sequence.
         /// </summary>
-        /// <returns>The RealEstate objects.</returns>
+        /// <returns>The real estates.</returns>
         public IObservable<IRealEstate> GetAsync()
         {
-            return Observable.Create<IRealEstate>(
+            return GetSummariesAsync().SelectMany(async r => await GetAsync(r.Id.ToString()));
+        }
+
+        /// <summary>
+        /// Get summaries for all real estates as an observable sequence.
+        /// </summary>
+        /// <returns>The summaries of all real estates.</returns>
+        public IObservable<OfferRealEstateForList> GetSummariesAsync()
+        {
+            return Observable.Create<OfferRealEstateForList>(
                 async o =>
                 {
                     var page = 1;
@@ -47,45 +54,13 @@ namespace IS24RestApi
                         req.AddParameter("pagenumber", page);
                         var rel = await ExecuteAsync<RealEstates>(Connection, req);
 
-                        foreach (OfferRealEstateForList ore in rel.RealEstateList)
-                        {
-                            var oreq = Connection.CreateRequest("realestate/{id}");
-                            oreq.AddParameter("id", ore.Id, ParameterType.UrlSegment);
-                            var re = await ExecuteAsync<RealEstate>(Connection, oreq);
-                            var item = new RealEstateItem(re, Connection);
-                            o.OnNext(item);
-                        }
+                        foreach (var ore in rel.RealEstateList)
+                            o.OnNext(ore);
 
                         if (page >= rel.Paging.NumberOfPages) break;
                         page++;
                     }
                 });
-        }
-
-        /// <summary>
-        /// Get all RealEstate objects as an enumerable sequence.
-        /// </summary>
-        /// <returns>The OfferRealEstateForList objects.</returns>
-        public List<OfferRealEstateForList> GetAsyncList()
-        {
-            var result = new List<OfferRealEstateForList>();
-            var page = 1;
-
-            while (true)
-            {
-                var req = Connection.CreateRequest("realestate");
-                req.AddParameter("pagesize", 100);
-                req.AddParameter("pagenumber", page);
-                var relTask = ExecuteAsync<RealEstates>(Connection, req);
-                relTask.Wait();
-                var rel = relTask.Result;
-
-                result.AddRange(rel.RealEstateList);
-
-                if (page >= rel.Paging.NumberOfPages) break;
-                page++;
-            }
-            return result;
         }
 
         /// <summary>
